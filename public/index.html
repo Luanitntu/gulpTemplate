@@ -4,10 +4,2545 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/libs/fontawesome/css/fontawesome.css"
+    />
+    <link rel="stylesheet" href="./assets/libs/fontawesome/css/regular.css" />
+    <link rel="stylesheet" href="./assets/libs/fontawesome/css/solid.css" />
+    <link rel="stylesheet" href="./assets/libs/fontawesome/css/brands.css" />
+    <link rel="stylesheet" href="./assets/libs/daterangepicker/daterangepicker.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/libs/select2/select2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/libs/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/libs/slick/slick-theme.css"
+    />
     <link rel="stylesheet" href="assets/css/mystyle.css">
 </head>
 <body>
-   <h1>Hello Word</h1>
+    <header>
+        <div class="top-bar">
+          <div class="container">
+            <div class="d-flex justify-content-between py-2">
+              <div class="top-bar__left d-flex">
+                <a href="#">notifierlesgo@gmail.com</a>
+                <a href="#">Kênh người bán hàng</a>
+                <a href="#">Liên hệ</a>
+              </div>
+              <div class="top-bar__right d-flex">
+                <a href="#">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="#">Đăng nhập</a>
+                <a href="#">Đăng ký</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <a class="navbar-brand" href="#" style="flex: 1">
+              <img src="./assets/images/logo.png" alt="ongvove" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dịch vụ
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">#1</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">#2</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">#3</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Tour
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">#4</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">#5</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">#6</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Sự kiện
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">#7</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">#8</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">#9</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Tìm chuyến bay</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <section class="search">
+          <div class="bg-banner pt-5">
+            <h1>THẾ GIỚI TRỌN NIỀM VUI</h1>
+            <p>
+              Từ chuyến phượt “ngẫu hứng” đến những cuộc phiêu lưu, khám phá công
+              thức niềm vui của riêng bạn
+            </p>
+          </div>
+          <div class="search-group container">
+            <ul class="nav nav-underline pb-2" id="tabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="tabs"
+                  data-bs-toggle="tab"
+                  data-bs-target="#search-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="search-tab-pane"
+                  aria-selected="true"
+                >
+                  <i class="fa-regular fa-building"></i>
+                  <p>Dịch vụ lưu trú</p>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="tour-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tour-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile-tab-pane"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-road"></i>
+                  <p>Tour du lịch</p>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="event-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#event-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="event-tab-pane"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-ticket"></i>
+                  <p>Sự kiện</p>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="instruct-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#instruct-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="instruct-tab-pane"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-user-group"></i>
+                  <p>Hướng dẫn viên thổ địa</p>
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="search-tab-content">
+              <div
+                class="tab-pane fade show active"
+                id="search-tab-pane"
+                role="tabpanel"
+                aria-labelledby="search-tab"
+                tabindex="0"
+              >
+                <form action="./search-hotel-page.html">
+                  <div class="row mt-3">
+                    <div class="col-3 line">
+                      <select
+                        class="form-select select-location"
+                        name="service-address"
+                        style="height: 38px; width: 100%"
+                      >
+                        <option></option>
+                        <option value="NT">Nha Trang</option>
+                        <option value="HCM">Tp Hồ Chí Minh</option>
+                        <option value="VT">Vũng Tàu</option>
+                      </select>
+                      <i class="fa-solid fa-location-dot group-icon"></i>
+                    </div>
+                    <div class="col-4 line">
+                      <div class="row">
+                        <div class="col-6 position-relative">
+                          <input id="startDateService" class="form-control input-date" name="startDate" type="text" value="" placeholder="Từ ngày"/>
+                          <i class="fa fa-calendar group-icon"></i>
+                        </div>
+                        <div class="col-6 position-relative">
+                          <input id="endDateService" class="form-control input-date" name="endDate" type="text" value="" placeholder="Đến ngày"/>
+                          <i class="fa fa-calendar group-icon"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-5 line">
+                      <div class="row">
+                        <div class="col-8">
+                          <div class="dropdown-center">
+                            <div
+                              class="form-control custom-btn position-relative"
+                              name="select-guest"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                              data-bs-auto-close="outside" aria-expanded="false"
+                            >
+                              <div class="render">
+                                <span class="adults"
+                                ><span class="one">1 người lớn</span>
+                                <span
+                                  class="multi d-none"
+                                  data-html=":count người lớn"
+                                  >1 người lớn</span
+                                ></span
+                              >, 
+                              <span class="children">
+                                <span
+                                  class="one d-none"
+                                  data-html=":count trẻ con"
+                                  >1 trẻ con</span
+                                >
+                                <span class="multi" data-html=":count trẻ con"
+                                  >0 trẻ con</span
+                                >,<span class="rooms">
+                                  <span
+                                    class="one d-none"
+                                    data-html=":count phòng"
+                                    >0 phòng</span
+                                  >
+                                  <span class="multi" data-html=":count phòng"
+                                    >1 phòng</span
+                                  >
+                              </span>
+                              </div>
+                            </div>
+                            <i class="fa-solid fa-user-group group-icon"></i>
+                            <ul class="dropdown-menu dropdown-rooms">
+                              <li class="dropdown-item-row">
+                                <span class="label">Phòng</span>
+                                <div class="val">
+                                  <span class="btn-minus" data-input="rooms"><i class="fa-solid fa-minus"></i></i></span>
+                                  <span class="count-display"><input type="number" name="rooms" value="1" min="1"></span>
+                                  <span class="btn-add" data-input="rooms"><i class="fa-solid fa-plus"></i></i></span>
+                                </div>
+                              </li>
+                              <li class="dropdown-item-row">
+                                <span class="label">Người lớn</span>
+                                <div class="val">
+                                  <span class="btn-minus" data-input="adults"><i class="fa-solid fa-minus"></i></i></span>
+                                  <span class="count-display"><input type="number" name="adults" value="1" min="1"></span>
+                                  <span class="btn-add" data-input="adults"><i class="fa-solid fa-plus"></i></i></span>
+                                </div>
+                              </li>
+                              <li class="dropdown-item-row">
+                                <span class="label">Trẻ em</span>
+                                <div class="val">
+                                  <span class="btn-minus" data-input="children"><i class="fa-solid fa-minus"></i></i></span>
+                                  <span class="count-display"><input type="number" name="children" value="0" min="0"></span>
+                                  <span class="btn-add" data-input="children"><i class="fa-solid fa-plus"></i></i></span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <button type="submit" class="btn btn-submit d-flex">
+                            Tìm kiếm <i class="fa-solid fa-magnifying-glass"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="tour-tab-pane"
+                role="tabpanel"
+                aria-labelledby="tour-tab"
+                tabindex="1"
+              >
+              <form>
+                <div class="row mt-3">
+                  <div class="col-3 line">
+                    <select
+                      class="form-select select-location"
+                      name="tour-address"
+                      style="height: 38px; width: 100%"
+                    >
+                      <option></option>
+                      <option value="NT">Nha Trang</option>
+                      <option value="HCM">Tp Hồ Chí Minh</option>
+                      <option value="VT">Vũng Tàu</option>
+                    </select>
+                    <i class="fa-solid fa-location-dot group-icon"></i>
+                  </div>
+                  <div class="col-4 line">
+                    <div class="row">
+                      <div class="col-6 position-relative">
+                        <input id="startDateTour" class="form-control input-date" name="startDate" type="text" value="" placeholder="Từ ngày"/>
+                        <i class="fa fa-calendar group-icon"></i>
+                      </div>
+                      <div class="col-6 position-relative">
+                        <input id="endDateTour" class="form-control input-date" name="endDate" type="text" value="" placeholder="Đến ngày"/>
+                        <i class="fa fa-calendar group-icon"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-5 line">
+                    <div class="row">
+                      <div class="col-8 position-relative">
+                        <input type="text" class="form-control input-group-text input-search" name="search-tour" placeholder="Tìm kiếm sự kiện">
+                        <i class="fa-solid fa-magnifying-glass position-absolute" style="
+                        right: 25px;
+                        top: 11px;
+                        color: rgba(217, 217, 217, 1);"></i>
+                      </div>
+                      <div class="col-4">
+                        <button type="submit" class="btn btn-submit d-flex">
+                          Tìm kiếm <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="event-tab-pane"
+                role="tabpanel"
+                aria-labelledby="event-tab"
+                tabindex="2"
+              >
+              <form>
+                <div class="row mt-3">
+                  <div class="col-3 line">
+                    <select
+                      class="form-select select-location"
+                      name="event-address"
+                      style="height: 38px; width: 100%"
+                    >
+                      <option></option>
+                      <option value="NT">Nha Trang</option>
+                      <option value="HCM">Tp Hồ Chí Minh</option>
+                      <option value="VT">Vũng Tàu</option>
+                    </select>
+                    <i class="fa-solid fa-location-dot group-icon"></i>
+                  </div>
+                  <div class="col-4 line">
+                    <div class="row">
+                      <div class="col-6 position-relative">
+                        <input id="startDateEvent" class="form-control input-date" name="startDate" type="text" value="" placeholder="Từ ngày"/>
+                        <i class="fa fa-calendar group-icon"></i>
+                      </div>
+                      <div class="col-6 position-relative">
+                        <input id="endDateEvent" class="form-control input-date" name="endDate" type="text" value="" placeholder="Đến ngày"/>
+                        <i class="fa fa-calendar group-icon"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-5 line">
+                    <div class="row">
+                      <div class="col-8 position-relative">
+                        <input type="text" class="form-control input-group-text input-search" name="search-event" placeholder="Tìm kiếm sự kiện">
+                        <i class="fa-solid fa-magnifying-glass position-absolute" style="
+                        right: 25px;
+                        top: 11px;
+                        color: rgba(217, 217, 217, 1);"></i>
+                      </div>
+                      <div class="col-4">
+                        <button type="submit" class="btn btn-submit d-flex">
+                          Tìm kiếm <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="instruct-tab-pane"
+                role="tabpanel"
+                aria-labelledby="instruct-tab"
+                tabindex="3"
+              >
+              <form>
+                <div class="row mt-3">
+                  <div class="col-3 line">
+                    <select
+                      class="form-select select-location"
+                      name="event-address"
+                      style="height: 38px; width: 100%"
+                    >
+                      <option></option>
+                      <option value="NT">Nha Trang</option>
+                      <option value="HCM">Tp Hồ Chí Minh</option>
+                      <option value="VT">Vũng Tàu</option>
+                    </select>
+                    <i class="fa-solid fa-location-dot group-icon"></i>
+                  </div>
+                  <div class="col-9">
+                    <div class="row">
+                      <div class="col-10 line">
+                        <select
+                          class="form-select select-language"
+                          name="language"
+                          style="height: 38px; width: 100%"
+                        >
+                          <option></option>
+                          <option value="VN">Việt Nam</option>
+                          <option value="HQ">Hàn Quốc</option>
+                          <option value="TQ">Trung Quốc</option>
+                        </select>
+                        <i class="fa-solid fa-language group-icon"></i>
+                      </div>
+                      <div class="col-2">
+                        <button type="submit" class="btn btn-submit d-flex">
+                          Tìm kiếm <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header> 
+      <main>
+        <section class="tour">
+          <div class="container">
+            <p class="topic">TOUR NỔI BẬT</p>
+            <div class="tour-row">
+              <div class="row align-items-center">
+                <div class="col-10">
+                  <div class="ps-5 pe-5">
+                    <ul
+                      class="nav nav-tours b-2"
+                      id="tabs"
+                      role="tablist"
+                    >
+                      <li class="nav-item menu-item" role="presentation">
+                        <button
+                          class="menu-tab nav-link active"
+                          id="da-lat"
+                          data-bs-toggle="tab"
+                          data-bs-target="#da-lat-tab"
+                          type="button"
+                          role="tab"
+                          aria-controls="da-lat-tab"
+                          aria-selected="false"
+                        >
+                          Đà Lạt
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="menu-tab nav-link"
+                          id="nha-trang"
+                          data-bs-toggle="tab"
+                          data-bs-target="#nha-trang-tab"
+                          type="button"
+                          role="tab"
+                          aria-controls="nha-trang-tab"
+                          aria-selected="false"
+                        >
+                          Nha Trang
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="menu-tab nav-link"
+                          id="da-nang"
+                          data-bs-toggle="tab"
+                          data-bs-target="#da-nang-tab"
+                          type="button"
+                          role="tab"
+                          aria-controls="da-nang-tab"
+                          aria-selected="false"
+                        >
+                          Đà Nẵng
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="menu-tab nav-link"
+                          id="vung-tau"
+                          data-bs-toggle="tab"
+                          data-bs-target="#05-tab-pane"
+                          type="button"
+                          role="tab"
+                          aria-controls="06-tab-pane"
+                          aria-selected="false"
+                        >
+                          Vũng Tàu
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="menu-tab nav-link"
+                          id="ha-giang"
+                          data-bs-toggle="tab"
+                          data-bs-target="#05-tab-pane"
+                          type="button"
+                          role="tab"
+                          aria-controls="05-tab-pane"
+                          aria-selected="false"
+                        >
+                          Hà Giang
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="menu-tab nav-link"
+                          id="ha-noi"
+                          data-bs-toggle="tab"
+                          data-bs-target="#06-tab-pane"
+                          type="button"
+                          role="tab"
+                          aria-controls="06-tab-pane"
+                          aria-selected="false"
+                        >
+                          Hà Nội
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="menu-tab nav-link"
+                          id="can-tho"
+                          data-bs-toggle="tab"
+                          data-bs-target="#07-tab-pane"
+                          type="button"
+                          role="tab"
+                          aria-controls="07-tab-pane"
+                          aria-selected="false"
+                        >
+                          Cần Thơ
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="menu-tab nav-link"
+                          id="moc-chau"
+                          data-bs-toggle="tab"
+                          data-bs-target="#08-tab-pane"
+                          type="button"
+                          role="tab"
+                          aria-controls="08-tab-pane"
+                          aria-selected="false"
+                        >
+                          Mộc Châu
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="menu-tab nav-link"
+                          id="hcm"
+                          data-bs-toggle="tab"
+                          data-bs-target="#09-tab-pane"
+                          type="button"
+                          role="tab"
+                          aria-controls="09-tab-pane"
+                          aria-selected="false"
+                        >
+                          TP Hồ Chí Minh
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="menu-tab nav-link"
+                          id="dai-loan"
+                          data-bs-toggle="tab"
+                          data-bs-target="#10-tab-pane"
+                          type="button"
+                          role="tab"
+                          aria-controls="10-tab-pane"
+                          aria-selected="false"
+                        >
+                          Đài Loan
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-2 text-end">
+                  <a href="#" class="see-more">Xem tất cả</a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tour-tab-content">
+              <div
+                class="tab-pane fade show active"
+                id="da-lat-tab"
+                role="tabpanel"
+                aria-labelledby="da-lat"
+                tabindex="0"
+              >
+                <div class="list-tour">
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-tour.jpg"
+                        alt="tour"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Tour Đà Lạt 3N2D - Đại Nội Huế - Hồ Xuân Hương - Thác
+                          Datanla - Vườn hoa Đà Lạt
+                        </p>
+  
+                        <div class="detail">
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Khởi hành:</span>
+                            <span class="text-end">7:00 07/03/2024</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Thời gian:</span>
+                            <span class="text-end">3 ngày 2 đêm</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Nơi khởi hành:</span>
+                            <span class="text-end">TP. Hồ Chí Minh</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Số lượng:</span>
+                            <span class="text-end">45</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Loại tour:</span>
+                            <span class="text-end">Tour đoàn</span>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <div class="price">Từ 5.596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-tour.jpg"
+                        alt="tour"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Tour Đà Lạt 3N2D - Đại Nội Huế - Hồ Xuân Hương - Thác
+                          Datanla - Vườn hoa Đà Lạt
+                        </p>
+  
+                        <div class="detail-tour">
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Khởi hành:</span>
+                            <span class="text-end">7:00 07/03/2024</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Thời gian:</span>
+                            <span class="text-end">3 ngày 2 đêm</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Nơi khởi hành:</span>
+                            <span class="text-end">TP. Hồ Chí Minh</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Số lượng:</span>
+                            <span class="text-end">45</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Loại tour:</span>
+                            <span class="text-end">Tour đoàn</span>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <div class="price">Từ 5.596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-tour.jpg"
+                        alt="tour"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Tour Đà Lạt 3N2D - Đại Nội Huế - Hồ Xuân Hương - Thác
+                          Datanla - Vườn hoa Đà Lạt
+                        </p>
+  
+                        <div class="detail">
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Khởi hành:</span>
+                            <span class="text-end">7:00 07/03/2024</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Thời gian:</span>
+                            <span class="text-end">3 ngày 2 đêm</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Nơi khởi hành:</span>
+                            <span class="text-end">TP. Hồ Chí Minh</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Số lượng:</span>
+                            <span class="text-end">45</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Loại tour:</span>
+                            <span class="text-end">Tour đoàn</span>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <div class="price">Từ 5.596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-tour.jpg"
+                        alt="tour"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Tour Đà Lạt 3N2D - Đại Nội Huế - Hồ Xuân Hương - Thác
+                          Datanla - Vườn hoa Đà Lạt
+                        </p>
+  
+                        <div class="detail">
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Khởi hành:</span>
+                            <span class="text-end">7:00 07/03/2024</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Thời gian:</span>
+                            <span class="text-end">3 ngày 2 đêm</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Nơi khởi hành:</span>
+                            <span class="text-end">TP. Hồ Chí Minh</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Số lượng:</span>
+                            <span class="text-end">45</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Loại tour:</span>
+                            <span class="text-end">Tour đoàn</span>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <div class="price">Từ 5.596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-tour.jpg"
+                        alt="tour"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Tour Đà Lạt 3N2D - Đại Nội Huế - Hồ Xuân Hương - Thác
+                          Datanla - Vườn hoa Đà Lạt
+                        </p>
+  
+                        <div class="detail">
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Khởi hành:</span>
+                            <span class="text-end">7:00 07/03/2024</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Thời gian:</span>
+                            <span class="text-end">3 ngày 2 đêm</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Nơi khởi hành:</span>
+                            <span class="text-end">TP. Hồ Chí Minh</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Số lượng:</span>
+                            <span class="text-end">45</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Loại tour:</span>
+                            <span class="text-end">Tour đoàn</span>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <div class="price">Từ 5.596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nha-trang-tab"
+                role="tabpanel"
+                aria-labelledby="nha-trang"
+                tabindex="1"
+              >
+                #1
+              </div>
+              <div
+                class="tab-pane fade"
+                id="da-nang-tab"
+                role="tabpanel"
+                aria-labelledby="da-nang"
+                tabindex="2"
+              >
+                #2
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="event">
+          <div class="container">
+            <p class="topic">SỰ KIỆN NỔI BẬT</p>
+            <div class="event-row d-flex align-items-center">
+              <div class="flex-fill">
+                <ul class="nav pb-2" id="tabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="menu-tab nav-link active"
+                      id="hoi-thao"
+                      data-bs-toggle="tab"
+                      data-bs-target="#hoi-thao-tab"
+                      type="button"
+                      role="tab"
+                      aria-controls="hoi-thao-tab"
+                      aria-selected="false"
+                    >
+                      Hội thảo - Khoa học
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="menu-tab nav-link"
+                      id="san-khau"
+                      data-bs-toggle="tab"
+                      data-bs-target="#san-khau-tab"
+                      type="button"
+                      role="tab"
+                      aria-controls="san-khau-tab"
+                      aria-selected="false"
+                    >
+                      Sân khấu nghệ thuật
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="menu-tab nav-link"
+                      id="hoa-nhac"
+                      data-bs-toggle="tab"
+                      data-bs-target="#hoa-nhac-tab"
+                      type="button"
+                      role="tab"
+                      aria-controls="hoa-nhac-tab"
+                      aria-selected="false"
+                    >
+                      Show hòa nhạc
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="see-more">Xem tất cả</a>
+            </div>
+            <div class="tab-content" id="event-tab-content">
+              <div
+                class="tab-pane fade show active"
+                id="hoi-thao-tab"
+                role="tabpanel"
+                aria-labelledby="hoi-thao"
+                tabindex="0"
+              >
+                <div class="list-event">
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-event.jpg"
+                        alt="event"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Tour Đà Lạt 3N2D - Đại Nội Huế - Hồ Xuân Hương - Thác
+                          Datanla - Vườn hoa Đà Lạt
+                        </p>
+  
+                        <div class="detail">
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Thời gian bắt đầu:</span>
+                            <span class="text-end">9:00 03/02/2024</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Khoảng thời gian:</span>
+                            <span class="text-end">16 giờ</span>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <div class="price">Từ 5.596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-event.jpg"
+                        alt="event"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Tour Đà Lạt 3N2D - Đại Nội Huế - Hồ Xuân Hương - Thác
+                          Datanla - Vườn hoa Đà Lạt
+                        </p>
+  
+                        <div class="detail">
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Thời gian bắt đầu:</span>
+                            <span class="text-end">9:00 03/02/2024</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Khoảng thời gian:</span>
+                            <span class="text-end">16 giờ</span>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <div class="price">Từ 5.596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-event.jpg"
+                        alt="event"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Tour Đà Lạt 3N2D - Đại Nội Huế - Hồ Xuân Hương - Thác
+                          Datanla - Vườn hoa Đà Lạt
+                        </p>
+  
+                        <div class="detail">
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Thời gian bắt đầu:</span>
+                            <span class="text-end">9:00 03/02/2024</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Khoảng thời gian:</span>
+                            <span class="text-end">16 giờ</span>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <div class="price">Từ 5.596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-event.jpg"
+                        alt="event"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Tour Đà Lạt 3N2D - Đại Nội Huế - Hồ Xuân Hương - Thác
+                          Datanla - Vườn hoa Đà Lạt
+                        </p>
+  
+                        <div class="detail">
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Thời gian bắt đầu:</span>
+                            <span class="text-end">9:00 03/02/2024</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Khoảng thời gian:</span>
+                            <span class="text-end">16 giờ</span>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <div class="price">Từ 5.596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-event.jpg"
+                        alt="event"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Tour Đà Lạt 3N2D - Đại Nội Huế - Hồ Xuân Hương - Thác
+                          Datanla - Vườn hoa Đà Lạt
+                        </p>
+  
+                        <div class="detail">
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Thời gian bắt đầu:</span>
+                            <span class="text-end">9:00 03/02/2024</span>
+                          </div>
+                          <div
+                            class="d-flex align-items-center justify-content-between mb-1"
+                          >
+                            <span>Khoảng thời gian:</span>
+                            <span class="text-end">16 giờ</span>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <div class="price">Từ 5.596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="san-khau-tab"
+                role="tabpanel"
+                aria-labelledby="san-khau"
+                tabindex="1"
+              >
+                #1
+              </div>
+              <div
+                class="tab-pane fade"
+                id="hoa-nhac-tab"
+                role="tabpanel"
+                aria-labelledby="hoa-nhac"
+                tabindex="2"
+              >
+                #2
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="experience">
+          <div class="container">
+            <p class="topic">TRẢI NGHIỆM CHO MỌI NGƯỜI</p>
+            <div class="row">
+              <div class="col">
+                <div class="card position-relative">
+                  <img
+                    src="./assets/images/image-thumbnail.jpg"
+                    alt="image-experience"
+                    class="img-fluid w-full thumbnail"
+                  />
+                  <div
+                    class="position-absolute z-2 top-0 left-0 bottom-0 p-4 w-full d-inline-flex flex-column"
+                  >
+                    <div class="group-text">
+                      <p class="header-text">Trải nghiệm Tour hàng đầu</p>
+                      <p class="sub-text">
+                        Gợi ý các tour du lịch hàng đầu tại Ong vò vẽ
+                      </p>
+                    </div>
+                    <a class="btn btn-explore mt-auto" href="#" role="button"
+                      >Khám phá</a
+                    >
+                  </div>
+                  <div class="background-overlay linear-orange"></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card position-relative">
+                  <img
+                    src="./assets/images/image-thumbnail-1.jpg"
+                    alt="image-experience"
+                    class="img-fluid w-full thumbnail"
+                  />
+                  <div
+                    class="position-absolute z-2 top-0 left-0 bottom-0 p-4 w-full d-inline-flex flex-column"
+                  >
+                    <div class="group-text">
+                      <p class="header-text">Sự kiện nổi bật</p>
+                      <p class="sub-text">Các sự kiện nổi bật tại Ong vò vẽ</p>
+                    </div>
+                    <a class="btn btn-explore mt-auto" href="#" role="button"
+                      >Khám phá</a
+                    >
+                  </div>
+                  <div class="background-overlay linear-blue"></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card position-relative">
+                  <img
+                    src="./assets/images/image-thumbnail-2.jpg"
+                    alt="image-experience"
+                    class="img-fluid w-full thumbnail"
+                  />
+                  <div
+                    class="position-absolute z-2 top-0 left-0 bottom-0 p-4 w-full d-inline-flex flex-column"
+                  >
+                    <div class="group-text">
+                      <p class="header-text">Khu nghỉ dưỡng tuyệt vời</p>
+                      <p class="sub-text">Các khách sạn nổi bật tại Ong vò vẽ</p>
+                    </div>
+                    <a class="btn btn-explore mt-auto" href="#" role="button"
+                      >Khám phá</a
+                    >
+                  </div>
+                  <div class="background-overlay linear-yellow"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="place">
+          <div class="container">
+            <p class="topic">BẠN MUỐN ĐI CHƠI Ở ĐÂU ?</p>
+            <div class="list-place">
+              <a href="#">
+                <div class="card position-relative">
+                  <img
+                    src="./assets/images/vung-tau.jpg"
+                    alt="image-place"
+                    class="img-fluid w-full thumbnail"
+                  />
+                  <p class="position-absolute place-text">Vũng tàu</p>
+                </div>
+              </a>
+  
+              <a href="#">
+                <div class="card position-relative">
+                  <img
+                    src="./assets/images/da-nang.jpg"
+                    alt="image-place"
+                    class="img-fluid w-full thumbnail"
+                  />
+                  <p class="position-absolute place-text">Đà Nẵng</p>
+                </div>
+              </a>
+  
+              <a href="#">
+                <div class="card position-relative">
+                  <img
+                    src="./assets/images/ha-noi.jpg"
+                    alt="image-place"
+                    class="img-fluid w-full thumbnail"
+                  />
+                  <p class="position-absolute place-text">Hà nội</p>
+                </div>
+              </a>
+  
+              <a href="#">
+                <div class="card position-relative">
+                  <img
+                    src="./assets/images/nha-trang.jpg"
+                    alt="image-place"
+                    class="img-fluid w-full thumbnail"
+                  />
+                  <p class="position-absolute place-text">Nha Trang</p>
+                </div>
+              </a>
+  
+              <a href="#">
+                <div class="card position-relative">
+                  <img
+                    src="./assets/images/da-lat.jpg"
+                    alt="image-place"
+                    class="img-fluid w-full thumbnail"
+                  />
+                  <p class="position-absolute place-text">Đà Lạt</p>
+                </div>
+              </a>
+  
+              <a href="#">
+                <div class="card position-relative">
+                  <img
+                    src="./assets/images/ha-giang.jpg"
+                    alt="image-place"
+                    class="img-fluid w-full thumbnail"
+                  />
+                  <p class="position-absolute place-text">Hà Giang</p>
+                </div>
+              </a>
+  
+              <a href="#">
+                <div class="card position-relative">
+                  <img
+                    src="./assets/images/ha-giang.jpg"
+                    alt="image-place"
+                    class="img-fluid w-full thumbnail"
+                  />
+                  <p class="position-absolute place-text">Sơn La</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+  
+        <section class="hotel">
+          <div class="container">
+            <p class="topic">KHÁCH SẠN NỔI BẬT</p>
+            <div class="event-row d-flex align-items-center">
+              <div class="flex-fill">
+                <ul class="nav pb-2" id="tabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="menu-tab nav-link active"
+                      id="ks-da-lat"
+                      data-bs-toggle="tab"
+                      data-bs-target="#ks-da-lat-tab"
+                      type="button"
+                      role="tab"
+                      aria-controls="ks-da-lat-tab"
+                      aria-selected="false"
+                    >
+                      Đà Lạt
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="menu-tab nav-link"
+                      id="ks-nha-trang"
+                      data-bs-toggle="tab"
+                      data-bs-target="#ks-nha-trang-tab"
+                      type="button"
+                      role="tab"
+                      aria-controls="ks-nha-trang-tab"
+                      aria-selected="false"
+                    >
+                      Nha Trang
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="menu-tab nav-link"
+                      id="ks-da-nang"
+                      data-bs-toggle="tab"
+                      data-bs-target="#ks-da-nang-tab"
+                      type="button"
+                      role="tab"
+                      aria-controls="ks-da-nang-tab"
+                      aria-selected="false"
+                    >
+                      Đà Nẵng
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="menu-tab nav-link"
+                      id="ks-vung-tau"
+                      data-bs-toggle="tab"
+                      data-bs-target="#ks-vung-tau-tab"
+                      type="button"
+                      role="tab"
+                      aria-controls="ks-vung-tau-tab"
+                      aria-selected="false"
+                    >
+                      Vũng Tàu
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="see-more">Xem tất cả</a>
+            </div>
+            <div class="tab-content" id="hotel-tab-content">
+              <div
+                class="tab-pane fade show active"
+                id="ks-da-lat-tab"
+                role="tabpanel"
+                aria-labelledby="ks-da-lat"
+                tabindex="0"
+              >
+                <div class="list-hotel">
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-hotel.jpg"
+                        alt="image-hotel"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="price fs-20 fw-600 text-start">
+                          5.596.000 VND <span class="part">/ đêm</span>
+                        </div>
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Sonder Hills Farmstay Đà Lạt - Thiên Đường Săn Mây
+                        </p>
+  
+                        <div class="detail">
+                          <div class="mb-1">
+                            <span class="gray-500 me-2">Diện tích: 22.0m2</span>
+                            <span class="gray-500"
+                              ><i class="fa-solid fa-bed"></i> 1 giường đôi</span
+                            >
+                          </div>
+                          <div class="mb-1">
+                            <span class="gray-500 me-2"
+                              ><i class="fa-solid fa-user-group"></i> 2 người
+                              lớn</span
+                            >
+                            <span class="gray-500"
+                              ><i class="fa-solid fa-baby"></i> 1 trẻ em</span
+                            >
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                          <!-- 
+                          <a href="#" class="btn btn-outline-orange"
+                            >Xem chi tiết</a
+                          > -->
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-hotel.jpg"
+                        alt="image-hotel"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="price fs-20 fw-600 text-start">
+                          5.596.000 VND <span class="part">/ đêm</span>
+                        </div>
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Sonder Hills Farmstay Đà Lạt - Thiên Đường Săn Mây
+                        </p>
+  
+                        <div class="detail">
+                          <div class="mb-1">
+                            <span class="gray-500 me-2">Diện tích: 22.0m2</span>
+                            <span class="gray-500"
+                              ><i class="fa-solid fa-bed"></i> 1 giường đôi</span
+                            >
+                          </div>
+                          <div class="mb-1">
+                            <span class="gray-500 me-2"
+                              ><i class="fa-solid fa-user-group"></i> 2 người
+                              lớn</span
+                            >
+                            <span class="gray-500"
+                              ><i class="fa-solid fa-baby"></i> 1 trẻ em</span
+                            >
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-hotel.jpg"
+                        alt="image-hotel"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="price fs-20 fw-600 text-start">
+                          5.596.000 VND <span class="part">/ đêm</span>
+                        </div>
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Sonder Hills Farmstay Đà Lạt - Thiên Đường Săn Mây
+                        </p>
+  
+                        <div class="detail">
+                          <div class="mb-1">
+                            <span class="gray-500 me-2">Diện tích: 22.0m2</span>
+                            <span class="gray-500"
+                              ><i class="fa-solid fa-bed"></i> 1 giường đôi</span
+                            >
+                          </div>
+                          <div class="mb-1">
+                            <span class="gray-500 me-2"
+                              ><i class="fa-solid fa-user-group"></i> 2 người
+                              lớn</span
+                            >
+                            <span class="gray-500"
+                              ><i class="fa-solid fa-baby"></i> 1 trẻ em</span
+                            >
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <!-- <a href="#" class="btn btn-outline-orange"
+                          >Xem chi tiết</a
+                        > -->
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-hotel.jpg"
+                        alt="image-hotel"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="price fs-20 fw-600 text-start">
+                          5.596.000 VND <span class="part">/ đêm</span>
+                        </div>
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Sonder Hills Farmstay Đà Lạt - Thiên Đường Săn Mây
+                        </p>
+  
+                        <div class="detail">
+                          <div class="mb-1">
+                            <span class="gray-500 me-2">Diện tích: 22.0m2</span>
+                            <span class="gray-500"
+                              ><i class="fa-solid fa-bed"></i> 1 giường đôi</span
+                            >
+                          </div>
+                          <div class="mb-1">
+                            <span class="gray-500 me-2"
+                              ><i class="fa-solid fa-user-group"></i> 2 người
+                              lớn</span
+                            >
+                            <span class="gray-500"
+                              ><i class="fa-solid fa-baby"></i> 1 trẻ em</span
+                            >
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <!-- <a href="#" class="btn btn-outline-orange"
+                          >Xem chi tiết</a
+                        > -->
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <div class="type">Đặc sắc</div>
+                      <img
+                        src="./assets/images/image-hotel.jpg"
+                        alt="image-hotel"
+                        class="img-fluid"
+                      />
+                      <div class="detail p-2">
+                        <div class="price fs-20 fw-600 text-start">
+                          5.596.000 VND <span class="part">/ đêm</span>
+                        </div>
+                        <div class="d-flex align-items-center location mb-1">
+                          <i class="fa-solid fa-location-arrow"></i>
+                          <p class="mb-0 ms-2">Đà lạt</p>
+                        </div>
+  
+                        <p class="title">
+                          Sonder Hills Farmstay Đà Lạt - Thiên Đường Săn Mây
+                        </p>
+  
+                        <div class="detail">
+                          <div class="mb-1">
+                            <span class="gray-500 me-2">Diện tích: 22.0m2</span>
+                            <span class="gray-500"
+                              ><i class="fa-solid fa-bed"></i> 1 giường đôi</span
+                            >
+                          </div>
+                          <div class="mb-1">
+                            <span class="gray-500 me-2"
+                              ><i class="fa-solid fa-user-group"></i> 2 người
+                              lớn</span
+                            >
+                            <span class="gray-500"
+                              ><i class="fa-solid fa-baby"></i> 1 trẻ em</span
+                            >
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 )</span>
+                        </div>
+  
+                        <!-- <a href="#" class="btn btn-outline-orange"
+                          >Xem chi tiết</a
+                        > -->
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="ks-nha-trang-tab"
+                role="tabpanel"
+                aria-labelledby="ks-nha-trang"
+                tabindex="1"
+              >
+                #1
+              </div>
+              <div
+                class="tab-pane fade"
+                id="ks-da-nang-tab"
+                role="tabpanel"
+                aria-labelledby="ks-hoa-nhac"
+                tabindex="2"
+              >
+                #2
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="advertisement">
+          <div class="container">
+            <img
+              src="./assets/images/banner-2.jpg"
+              alt="advertisement"
+              class="img-fluid w-full"
+            />
+          </div>
+        </section>
+  
+        <section class="tour-guide">
+          <div class="container">
+            <p class="topic">HƯỚNG DẪN VIÊN NỔI BẬT</p>
+            <div class="event-row d-flex align-items-center">
+              <div class="flex-fill">
+                <ul class="nav pb-2" id="tabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="menu-tab nav-link active"
+                      id="guide-da-lat"
+                      data-bs-toggle="tab"
+                      data-bs-target="#guide-da-lat-tab"
+                      type="button"
+                      role="tab"
+                      aria-controls="guide-da-lat-tab"
+                      aria-selected="false"
+                    >
+                      Đà Lạt
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="menu-tab nav-link"
+                      id="guide-ha-giang"
+                      data-bs-toggle="tab"
+                      data-bs-target="#guide-ha-giang-tab"
+                      type="button"
+                      role="tab"
+                      aria-controls="guide-ha-giang-tab"
+                      aria-selected="false"
+                    >
+                      Hà Giang
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="menu-tab nav-link"
+                      id="guide-hcm"
+                      data-bs-toggle="tab"
+                      data-bs-target="#guide-hcm-tab"
+                      type="button"
+                      role="tab"
+                      aria-controls="guide-hcm-tab"
+                      aria-selected="false"
+                    >
+                      Tp Hồ Chí Minh
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="menu-tab nav-link"
+                      id="guide-vung-tau"
+                      data-bs-toggle="tab"
+                      data-bs-target="#guide-vung-tau-tab"
+                      type="button"
+                      role="tab"
+                      aria-controls="guide-vung-tau-tab"
+                      aria-selected="false"
+                    >
+                      Vũng Tàu
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="see-more">Xem tất cả</a>
+            </div>
+            <div class="tab-content" id="tour-guide-tab-content">
+              <div
+                class="tab-pane fade show active"
+                id="guide-da-lat-tab"
+                role="tabpanel"
+                aria-labelledby="guide-da-lat"
+                tabindex="0"
+              >
+                <div class="list-guide">
+                  <a href="#">
+                    <div class="info">
+                      <img
+                        src="./assets/images/bap-nuong.jpg"
+                        alt="image-guide"
+                        class="img-fluid"
+                      />
+                      <div class="list-tour-guide">
+                        <img
+                          src="./assets/images/tour-guide.jpg"
+                          alt="tour-guide"
+                          class="position-absolute"
+                        />
+                        <img
+                          src="./assets/images/tour-guide.jpg"
+                          alt="tour-guide"
+                          class="position-absolute"
+                        />
+                        <div class="more-tour-guide position-absolute">
+                          +38 Hướng dẫn viên
+                        </div>
+                      </div>
+                      <div class="detail p-2 bg-pink">
+                        <p class="title fs-24 mt-4 mb-2">
+                          Thiên đường ẩm thực Đà Lạt
+                        </p>
+                        <div class="tag mb-2 mb-2">Food Tour</div>
+  
+                        <div class="detail tour-guide">
+                          <div class="mb-1 d-flex align-items-center gap-2">
+                            <div class="d-flex align-items-center location mb-1">
+                              <i class="fa-solid fa-location-arrow"></i>
+                              <p class="mb-0 ms-2">Đà lạt</p>
+                            </div>
+                            <div class="d-flex align-items-center hour mb-1">
+                              <i class="fa-regular fa-clock"></i>
+                              <p class="mb-0 ms-2">8 giờ</p>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 đánh giá)</span>
+                        </div>
+  
+                        <div class="price">Từ 596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <img
+                        src="./assets/images/bap-nuong.jpg"
+                        alt="image-guide"
+                        class="img-fluid"
+                      />
+                      <div class="list-tour-guide">
+                        <img
+                          src="./assets/images/tour-guide.jpg"
+                          alt="tour-guide"
+                          class="position-absolute"
+                        />
+                        <img
+                          src="./assets/images/tour-guide.jpg"
+                          alt="tour-guide"
+                          class="position-absolute"
+                        />
+                        <div class="more-tour-guide position-absolute">
+                          +38 Hướng dẫn viên
+                        </div>
+                      </div>
+                      <div class="detail p-2 bg-pink">
+                        <p class="title fs-24 mt-4 mb-2">
+                          Thiên đường ẩm thực Đà Lạt
+                        </p>
+                        <div class="tag mb-2">Food Tour</div>
+  
+                        <div class="detail tour-guide">
+                          <div class="mb-1 d-flex align-items-center gap-2">
+                            <div class="d-flex align-items-center location mb-1">
+                              <i class="fa-solid fa-location-arrow"></i>
+                              <p class="mb-0 ms-2">Đà lạt</p>
+                            </div>
+                            <div class="d-flex align-items-center hour mb-1">
+                              <i class="fa-regular fa-clock"></i>
+                              <p class="mb-0 ms-2">8 giờ</p>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 đánh giá)</span>
+                        </div>
+  
+                        <div class="price">Từ 596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <img
+                        src="./assets/images/bap-nuong.jpg"
+                        alt="image-guide"
+                        class="img-fluid"
+                      />
+                      <div class="list-tour-guide">
+                        <img
+                          src="./assets/images/tour-guide.jpg"
+                          alt="tour-guide"
+                          class="position-absolute"
+                        />
+                        <img
+                          src="./assets/images/tour-guide.jpg"
+                          alt="tour-guide"
+                          class="position-absolute"
+                        />
+                        <div class="more-tour-guide position-absolute">
+                          +38 Hướng dẫn viên
+                        </div>
+                      </div>
+                      <div class="detail p-2 bg-pink">
+                        <p class="title fs-24 mt-4 mb-2">
+                          Thiên đường ẩm thực Đà Lạt
+                        </p>
+                        <div class="tag mb-2">Food Tour</div>
+  
+                        <div class="detail tour-guide">
+                          <div class="mb-1 d-flex align-items-center gap-2">
+                            <div class="d-flex align-items-center location mb-1">
+                              <i class="fa-solid fa-location-arrow"></i>
+                              <p class="mb-0 ms-2">Đà lạt</p>
+                            </div>
+                            <div class="d-flex align-items-center hour mb-1">
+                              <i class="fa-regular fa-clock"></i>
+                              <p class="mb-0 ms-2">8 giờ</p>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 đánh giá)</span>
+                        </div>
+  
+                        <div class="price">Từ 596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+  
+                  <a href="#">
+                    <div class="info">
+                      <img
+                        src="./assets/images/bap-nuong.jpg"
+                        alt="image-guide"
+                        class="img-fluid"
+                      />
+                      <div class="list-tour-guide">
+                        <img
+                          src="./assets/images/tour-guide.jpg"
+                          alt="tour-guide"
+                          class="position-absolute"
+                        />
+                        <img
+                          src="./assets/images/tour-guide.jpg"
+                          alt="tour-guide"
+                          class="position-absolute"
+                        />
+                        <div class="more-tour-guide position-absolute">
+                          +38 Hướng dẫn viên
+                        </div>
+                      </div>
+                      <div class="detail p-2 bg-pink">
+                        <p class="title fs-24 mt-4 mb-2">
+                          Thiên đường ẩm thực Đà Lạt
+                        </p>
+                        <div class="tag mb-2">Food Tour</div>
+  
+                        <div class="detail tour-guide">
+                          <div class="mb-1 d-flex align-items-center gap-2">
+                            <div class="d-flex align-items-center location mb-1">
+                              <i class="fa-solid fa-location-arrow"></i>
+                              <p class="mb-0 ms-2">Đà lạt</p>
+                            </div>
+                            <div class="d-flex align-items-center hour mb-1">
+                              <i class="fa-regular fa-clock"></i>
+                              <p class="mb-0 ms-2">8 giờ</p>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="review d-flex mb-1">
+                          <ul class="nav">
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-solid fa-star active"></i></li>
+                            <li><i class="fa-regular fa-star"></i></li>
+                          </ul>
+                          <span>( 350 đánh giá)</span>
+                        </div>
+  
+                        <div class="price">Từ 596.000 VND</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="guide-ha-giang-tab"
+                role="tabpanel"
+                aria-labelledby="guide-ha-giang"
+                tabindex="1"
+              >
+                #1
+              </div>
+              <div
+                class="tab-pane fade"
+                id="guide-hcm-tab"
+                role="tabpanel"
+                aria-labelledby="guide-hcm"
+                tabindex="2"
+              >
+                #2
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="blog">
+          <div class="container">
+            <p class="topic">BLOG</p>
+            <ul class="nav pb-2" id="tabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="menu-tab nav-link active"
+                  id="exp-tour"
+                  data-bs-toggle="tab"
+                  data-bs-target="#exp-tour-tab"
+                  type="button"
+                  role="tab"
+                  aria-controls="exp-tour-tab"
+                  aria-selected="false"
+                >
+                  Kinh nghiệm du lịch
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="menu-tab nav-link"
+                  id="share"
+                  data-bs-toggle="tab"
+                  data-bs-target="#share-tab"
+                  type="button"
+                  role="tab"
+                  aria-controls="share-tab"
+                  aria-selected="false"
+                >
+                  Chia sẻ hay
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="menu-tab nav-link"
+                  id="our-guide"
+                  data-bs-toggle="tab"
+                  data-bs-target="#our-guide-tab"
+                  type="button"
+                  role="tab"
+                  aria-controls="our-guide-tab"
+                  aria-selected="false"
+                >
+                  Hướng dẫn của chúng tôi
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="blog-guide-tab-content">
+              <div
+                class="tab-pane fade show active"
+                id="exp-tour-tab"
+                role="tabpanel"
+                aria-labelledby="exp-tour"
+                tabindex="0"
+              >
+                <div class="row gy-4">
+                  <div class="col-6">
+                    <div class="blog-container">
+                      <div class="row">
+                        <div class="col-5">
+                          <img
+                            src="./assets/images/bap-nuong.jpg"
+                            alt="image-blog"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="col-7">
+                          <div class="blog-info">
+                            <div class="tag">Kinh nghiệm du lịch</div>
+                            <div class="title">
+                              Biểu Tượng Ẩm Thực Đà Lạt - Bắp Nướng Đà Lạt
+                            </div>
+                            <div class="description">
+                              Bắp nướng Đà Lạt, một biểu tượng ẩm thực nổi...
+                            </div>
+                            <a href="#">Xem thêm</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="blog-container">
+                      <div class="row">
+                        <div class="col-5">
+                          <img
+                            src="./assets/images/bap-nuong.jpg"
+                            alt="image-blog"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="col-7">
+                          <div class="blog-info">
+                            <div class="tag">Kinh nghiệm du lịch</div>
+                            <div class="title">
+                              Biểu Tượng Ẩm Thực Đà Lạt - Bắp Nướng Đà Lạt
+                            </div>
+                            <div class="description">
+                              Bắp nướng Đà Lạt, một biểu tượng ẩm thực nổi...
+                            </div>
+                            <a href="#">Xem thêm</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="blog-container">
+                      <div class="row">
+                        <div class="col-5">
+                          <img
+                            src="./assets/images/bap-nuong.jpg"
+                            alt="image-blog"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="col-7">
+                          <div class="blog-info">
+                            <div class="tag">Kinh nghiệm du lịch</div>
+                            <div class="title">
+                              Biểu Tượng Ẩm Thực Đà Lạt - Bắp Nướng Đà Lạt
+                            </div>
+                            <div class="description">
+                              Bắp nướng Đà Lạt, một biểu tượng ẩm thực nổi...
+                            </div>
+                            <a href="#">Xem thêm</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="blog-container">
+                      <div class="row">
+                        <div class="col-5">
+                          <img
+                            src="./assets/images/bap-nuong.jpg"
+                            alt="image-blog"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="col-7">
+                          <div class="blog-info">
+                            <div class="tag">Kinh nghiệm du lịch</div>
+                            <div class="title">
+                              Biểu Tượng Ẩm Thực Đà Lạt - Bắp Nướng Đà Lạt
+                            </div>
+                            <div class="description">
+                              Bắp nướng Đà Lạt, một biểu tượng ẩm thực nổi...
+                            </div>
+                            <a href="#">Xem thêm</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-grid col-4 mx-auto mt-4">
+                  <a href="#" class="btn btn-fill">Xem thêm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <hr />
+      <footer>
+        <div class="main-footer">
+          <div class="container">
+            <div class="even-columns">
+              <div>
+                <div class="footer-title">ONG VÒ VẼ</div>
+                <div class="company">
+                  <a href="#">
+                    <img src="./assets/images/logo.png" alt="logo" />
+                  </a>
+                  <div class="info-company mt-4">
+                    <p class="name-company">CÔNG TY TNHH ALPHAS</p>
+                    <p class="property">
+                      Trụ sở chính:
+                      <span class="value"
+                        >76 Nguyễn Giản Thanh, P.15, Q.10, Tp. HCM, Việt Nam</span
+                      >
+                    </p>
+                    <p class="property">
+                      Số ĐKKD:
+                      <span class="value">0316265122</span>
+                    </p>
+                    <p class="property">
+                      Email:
+                      <span class="value">notifierlesgo@gmail.com</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="footer-title">THÔNG TIN CHUNG</div>
+                <ul class="nav flex-column general">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#"
+                      >Về chúng tôi</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Chia sẻ kinh nghiệm</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Liên hệ với chúng tôi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cách đặt chỗ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Tuyển dụng</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Quy chế hoạt động</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Hợp đồng mẫu cung cấp dịch vụ</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div class="footer-title">HỖ TRỢ</div>
+                <ul class="nav flex-column general">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#"
+                      >Về chúng tôi</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Bạn hỏi - Ong Vò Vẽ đáp</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      >Hướng dẫn đăng ký tài khoản khách hàng</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      >Hướng dẫn đăng ký làm nhà cung cấp</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      >Hướng dẫn đăng tour trên Ong Vò Vẽ</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Hướng dẫn đăng sự kiện</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Hướng dẫn đăng thêm khách sạn</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="d-grid gap-3">
+                <div class="footer-title">KHÁC</div>
+                <div class="payment">
+                  <p>Đối tác thanh toán</p>
+                  <div class="list-payment">
+                    <div>
+                      <img src="./assets/images/vnpay-qr1.png" alt="vnpay" />
+                    </div>
+                    <div><img src="./assets/images/msb.png" alt="msb" /></div>
+                    <div><img src="./assets/images/mtc.png" alt="mtc" /></div>
+                    <div><img src="./assets/images/visa.png" alt="visa" /></div>
+                    <div><img src="./assets/images/jcb.png" alt="jcb" /></div>
+                    <div>
+                      <img src="./assets/images/cash-payment.png" alt="cash" />
+                    </div>
+                  </div>
+                </div>
+                <div class="social">
+                  <p>Theo dõi chúng tôi qua các kênh</p>
+                  <div class="even-columns">
+                    <a
+                      href="https://www.facebook.com/ongvovetravel"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-regular fa-message"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa-solid fa-phone"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="gov">
+                  <a
+                    href="http://online.gov.vn/Home/WebDetails/103494"
+                    target="_blank"
+                  >
+                    <img src="./assets/images/logoccdv-200.jpg" alt="ccdv" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="copyright">
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+              <p>Copyright © 2023 by Ong Vò Vẽ</p>
+              <p>Phát triển bởi Mekoong Media</p>
+            </div>
+          </div>
+        </div>
+      </footer>
 </body>
+<script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+    ></script>
+<script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./assets/libs/select2/select2.min.js"></script>
+<script src="./assets/libs/slick/slick.min.js"></script>
+<script src="./assets/libs/daterangepicker/moment.min.js"></script>
+<script src="./assets/libs/daterangepicker/daterangepicker.js"></script>
 <script src="assets/js/myscript.js"></script>
 </html>

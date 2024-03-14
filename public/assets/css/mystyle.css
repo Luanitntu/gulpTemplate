@@ -1,4 +1,945 @@
-h1 {
-    color: red;
-    font-size: 20px;
+@charset "UTF-8";
+/***
+    The new CSS reset - version 1.11.2 (last updated 15.11.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
 }
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu, summary {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto; }
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert; }
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert; }
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+  box-sizing: border-box; }
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset; }
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none; }
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto; }
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+  -webkit-user-drag: element; }
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+  box-sizing: border-box; }
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+  display: none; }
+
+/* CSS HEADER */
+.top-bar {
+  background-color: var(--clr-white);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-14); }
+
+.top-bar__left > a, .top-bar__right > a {
+  text-decoration: none;
+  color: var(--clr-orange); }
+
+.top-bar__left > a::after, .top-bar__right > a::after {
+  content: "";
+  border-right: 1px solid var(--clr-orange);
+  margin: 10px; }
+
+.top-bar__left > a:last-child:after, .top-bar__right > a:last-child:after {
+  content: "";
+  border-right: none;
+  margin: 0; }
+
+.navbar-nav {
+  font-size: var(--fs-20);
+  font-weight: var(--fw-600); }
+
+.navbar-nav > .nav-item > .nav-link:hover {
+  color: var(--clr-orange); }
+
+.dropdown-item:hover {
+  color: var(--clr-orange);
+  background: none; }
+
+.search {
+  position: relative; }
+
+.bg-banner {
+  background: url("../images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  text-align: center;
+  color: white;
+  height: 450px; }
+
+.bg-banner > h1 {
+  font-size: var(--fs-60);
+  font-weight: var(--fw-500); }
+
+.bg-banner > p {
+  font-size: var(--fs-20);
+  font-weight: var(--fw-400); }
+
+.search-group {
+  position: absolute;
+  bottom: -15%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid var(--clr-orange);
+  border-radius: 5px;
+  padding: 24px 20px 24px 20px;
+  box-shadow: 0px 4px 4px 0px #00000040; }
+
+.nav-underline .nav-link {
+  color: black;
+  width: 100%; }
+
+.nav-underline .nav-link:hover {
+  color: var(--clr-orange) !important; }
+
+.nav-underline .nav-link.active {
+  color: var(--clr-orange) !important; }
+
+.nav-underline {
+  gap: 16px; }
+
+.nav-link > p {
+  margin-bottom: 0; }
+
+.form-select {
+  padding: .375rem .75rem .375rem .75rem; }
+
+.input-group > .input-group-text {
+  background-color: #F5F5F5F5;
+  color: var(--clr-orange);
+  border: none; }
+
+.group-icon {
+  position: absolute;
+  right: 25px;
+  top: 9px;
+  font-size: 15px;
+  color: var(--clr-orange); }
+
+#address, #type-room {
+  --bs-form-select-bg-img: none;
+  border: none;
+  color: var(--clr-orange);
+  background-color: #F5F5F5F5; }
+
+.input-date, .input-date::placeholder {
+  --bs-form-select-bg-img: none;
+  border: none;
+  color: var(--clr-orange);
+  background-color: #F5F5F5F5;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-400);
+  padding: 7px 12px; }
+
+.input-date:hover {
+  cursor: pointer; }
+
+.input-date:focus {
+  box-shadow: 0 0 0 0.1rem var(--clr-orange);
+  background-color: rgba(245, 245, 245, 0.96); }
+
+.btn-submit {
+  color: white;
+  background-color: var(--clr-orange);
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-400);
+  padding: 6px 12px; }
+
+.btn-submit:hover {
+  color: white;
+  background-color: #FF6347; }
+
+.custom-btn {
+  color: var(--clr-orange);
+  border: none;
+  background-color: #F5F5F5F5;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-400);
+  padding: 7px 12px; }
+
+.custom-btn:focus {
+  border: none;
+  box-shadow: none;
+  color: var(--clr-orange);
+  background-color: #F5F5F5F5; }
+
+.custom-btn:hover {
+  cursor: pointer; }
+
+.fa-user-group.group-icon {
+  right: 10px; }
+
+.dropdown-rooms.show {
+  transform: translate3d(0px, 38.1818px, 0px);
+  width: 100%;
+  border: 1px solid var(--clr-orange); }
+
+.dropdown-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 14px 4px 24px; }
+
+.dropdown-item-row .val {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.dropdown-item-row .val span {
+  margin-right: 5px; }
+
+.dropdown-item-row .val span:last-child {
+  margin-right: 0; }
+
+.dropdown-item-row .val .btn-minus, .dropdown-item-row .val .btn-add {
+  color: var(--clr-orange);
+  cursor: pointer; }
+
+.dropdown-item-row .val .btn-minus:hover, .dropdown-item-row .val .btn-add:hover {
+  color: #FF6347; }
+
+.dropdown-item-row .label {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-400); }
+
+.count-display {
+  min-width: 25px;
+  text-align: center; }
+
+.count-display input {
+  width: 35px;
+  border-radius: 5px;
+  text-align: center;
+  border-color: rgba(0, 0, 0, 0.3); }
+
+.line {
+  position: relative; }
+
+.line::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  border-right: 1px solid rgba(108, 117, 124, 0.2);
+  right: 0;
+  top: 0; }
+
+.line:last-child::after {
+  content: '';
+  border-right: none; }
+
+.input-search {
+  text-align: left;
+  border: none;
+  background-color: rgba(245, 245, 245, 0.96); }
+
+.input-search:focus {
+  box-shadow: 0 0 0 0.1rem var(--clr-orange);
+  background-color: rgba(245, 245, 245, 0.96); }
+
+.input-search::placeholder {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-400);
+  color: #d9d9d9; }
+
+/* END CSS HEADER */
+/* CSS FOOTER */
+.even-columns {
+  display: grid;
+  gap: 1rem; }
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr; } }
+
+.footer-title {
+  position: relative;
+  font-size: var(--fs-20);
+  font-weight: var(--fw-600);
+  padding-bottom: 15px;
+  margin-bottom: 25px; }
+
+.footer-title::before {
+  content: "";
+  position: absolute;
+  width: 136px;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #DFDFDF; }
+
+.info-company {
+  position: relative;
+  padding-left: 25px; }
+
+.info-company::before {
+  content: "";
+  position: absolute;
+  border-left: 3px solid var(--clr-orange);
+  top: 20px;
+  left: 0;
+  height: 85%; }
+
+.info-company .name-company {
+  color: var(--clr-orange);
+  font-size: var(--fs-20);
+  font-weight: var(--fw-600); }
+
+.info-company .property {
+  color: #1A2B47;
+  font-size: var(--fs-18);
+  font-weight: var(--fw-600); }
+
+.info-company .value {
+  color: #989898;
+  font-size: var(--fs-18);
+  font-weight: var(--fw-400); }
+
+.general {
+  gap: 10px; }
+
+.general .nav-item .nav-link {
+  padding-left: 0;
+  color: #403E3E;
+  font-size: var(--fs-16);
+  font-weight: var(--fw-400);
+  line-height: 24px; }
+
+.general .nav-item .nav-link:hover {
+  color: #817d7d; }
+
+.payment p {
+  font-size: var(--fs-18);
+  font-weight: var(--fw-500);
+  color: #A6A5A5; }
+
+.payment, .social, .gov {
+  position: relative;
+  padding-left: 25px; }
+
+.payment::after, .social::after, .gov::after {
+  content: "";
+  position: absolute;
+  border-left: 3px solid var(--clr-orange);
+  top: 0;
+  left: 0;
+  height: 85%; }
+
+.payment p, .social p {
+  font-size: var(--fs-18);
+  font-weight: var(--fw-500);
+  color: #403E3E; }
+
+.social div {
+  text-align: center; }
+
+.social i {
+  color: #1A2B47; }
+
+.list-payment {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0.5rem; }
+
+.list-payment div {
+  text-align: center;
+  border-radius: 6px;
+  background-color: #FFF6D8;
+  padding: 4px; }
+
+.gov {
+  text-align: center; }
+
+.copyright p {
+  font-size: var(--fs-20);
+  font-weight: var(--fw-400); }
+
+/* END CSS FOOTER */
+:root {
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fs-12: 0.75rem;
+  /* 12px */
+  --fs-14: 0.875rem;
+  /* 14px */
+  --fs-16: 1rem;
+  /* 16px */
+  --fs-18: 1.125rem;
+  /* 18px */
+  --fs-20: 1.25rem;
+  /* 20px */
+  --fs-24: 1.5rem;
+  /* 24px */
+  --fs-60: 3.75rem;
+  /* 60px */
+  --clr-orange: #FF5B00;
+  --clr-white: #FCF6F2;
+  --clr-yellow: #FFC240;
+  --clr-gray: #00000075;
+  --clr-gray-500: #403E3E;
+  --clr-pink: #FFF4EF;
+  --ln-orange: linear-gradient(126.56deg, #FF5B00 0.81%, rgba(217, 217, 217, 0) 100%);
+  --ln-blue: linear-gradient(126.56deg, #0094FF 0.81%, rgba(217, 217, 217, 0) 100%);
+  --ln-yellow: linear-gradient(126.56deg, #FFC240 0.81%, rgba(217, 217, 217, 0) 100%); }
+
+html > * {
+  font-size: 14px;
+  line-height: 27px;
+  font-weight: 600; }
+
+img {
+  max-width: 100%; }
+
+@font-face {
+  src: url("../fonts/Inter-Regular.ttf");
+  font-family: Inter; }
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+/* CSS GENERAL */
+.container {
+  max-width: 1110px; }
+
+.w-full {
+  width: 100%; }
+
+.linear-orange {
+  background-image: var(--ln-orange); }
+
+.linear-blue {
+  background-image: var(--ln-blue); }
+
+.linear-yellow {
+  background-image: var(--ln-yellow); }
+
+.bg-pink {
+  background-color: var(--clr-pink); }
+
+.disable-custom {
+  pointer-events: none;
+  opacity: 0.4; }
+
+body {
+  font-family: "Inter"; }
+
+section {
+  margin-bottom: 1.5rem; }
+
+section:last-child {
+  margin-bottom: 0; }
+
+.btn-primary {
+  background: var(--clr-orange);
+  color: white; }
+
+.btn-secondary {
+  background: rgba(245, 245, 245, 0.96);
+  color: var(--clr-orange) !important;
+  border: none; }
+
+.btn-secondary:hover {
+  background: #e9ecef; }
+
+.btn-collapse {
+  position: relative;
+  border-radius: 0;
+  background-color: white;
+  color: var(--clr-orange);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 0; }
+
+.btn-collapse:active {
+  border: transparent;
+  color: var(--clr-orange) !important; }
+
+.btn-collapse::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid; }
+
+.btn-collapse:hover {
+  color: var(--clr-orange); }
+
+/* END CSS GENERAL */
+/* CSS HOME PAGE */
+.tour {
+  margin-top: 6rem; }
+
+.topic {
+  color: var(--clr-orange);
+  font-size: var(--fs-20);
+  font-weight: var(--fw-700); }
+
+.see-more {
+  text-decoration: none;
+  color: var(--clr-orange);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-600); }
+
+/* TOUR */
+/* .menu-item {
+    width: auto !important;
+} */
+.menu-tab.nav-link.active {
+  border-radius: 15px;
+  border: 1px solid var(--clr-orange);
+  color: var(--clr-orange); }
+
+.menu-tab {
+  width: 100%;
+  color: black;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-600); }
+
+.menu-tab:hover {
+  color: var(--clr-orange); }
+
+.info {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px #00000040; }
+
+.type {
+  position: absolute;
+  background-color: var(--clr-orange);
+  color: white;
+  padding: 8px 4px 8px 4px;
+  border-radius: 5px;
+  top: 15px;
+  left: 10px;
+  font-size: var(--fs-12);
+  font-weight: var(--fw-400);
+  line-height: 16px; }
+
+.location, .hour {
+  color: var(--clr-orange);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-14); }
+
+.location i, .hour i {
+  color: var(--clr-orange); }
+
+.title {
+  font-weight: var(--fw-600);
+  font-size: var(--fs-14); }
+
+.detail {
+  font-weight: var(--fw-400);
+  font-size: var(--fs-12); }
+
+.review > .nav {
+  gap: 4px; }
+
+.review > .nav > li > i.active {
+  color: var(--clr-yellow); }
+
+.price {
+  text-align: right;
+  color: var(--clr-orange);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-600); }
+
+/*  */
+/* SLICK SLIDER */
+.nav-tours .slick-list .slick-track .slick-slide .nav-item .menu-tab {
+  width: 138px; }
+
+.slick-slide {
+  /* width: fit-content !important; */
+  margin: 10px; }
+
+.slick-slide img {
+  width: 100%;
+  transition: all .3s; }
+
+.slick-slide a {
+  transition: all .3s;
+  color: black !important;
+  text-decoration: none; }
+
+.slick-arrow::before {
+  content: '\f054';
+  color: var(--clr-gray);
+  background: white;
+  border-radius: 100%;
+  box-shadow: 0px 4px 20px 0px #00000026;
+  opacity: 1;
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-image: url("../images/chevron_left.jpg");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.slick-content-prev.slick-arrow::before {
+  transform: rotate(180deg); }
+
+.slick-content-prev.slick-disabled:before, .slick-content-next.slick-disabled:before {
+  opacity: 0.55; }
+
+.slick-content-prev {
+  left: -10px;
+  z-index: 5; }
+
+.slick-content-next {
+  right: 10px;
+  z-index: 5; }
+
+/* .nav-tours .slick-slide {
+    width: fit-content !important;
+} */
+.nav-tours .slick-slide {
+  margin: 0; }
+
+.slick-tab-prev.slick-prev {
+  top: 14px;
+  left: -45px; }
+
+.slick-tab-next.slick-next {
+  top: 10px;
+  right: -25px; }
+
+.slick-tab-prev.slick-arrow::before {
+  transform: rotate(180deg); }
+
+.slick-disabled:before, .slick-disabled {
+  display: none !important; }
+
+.slick-place-prev.slick-prev {
+  left: -10px;
+  z-index: 5; }
+
+.slick-place-next.slick-next {
+  right: 10px;
+  z-index: 5; }
+
+.slick-place-prev.slick-arrow::before {
+  transform: rotate(180deg); }
+
+.slick-hotel-prev.slick-prev {
+  left: -10px;
+  z-index: 5; }
+
+.slick-hotel-next.slick-next {
+  right: 10px;
+  z-index: 5; }
+
+.slick-hotel-prev.slick-arrow::before {
+  transform: rotate(180deg); }
+
+.slick-guide-prev.slick-prev {
+  left: -10px;
+  z-index: 5; }
+
+.slick-guide-next.slick-next {
+  right: 10px;
+  z-index: 5; }
+
+.slick-guide-prev.slick-arrow::before {
+  transform: rotate(180deg); }
+
+/*  */
+/* TRẢI NGHIỆM */
+/* CARD */
+.card {
+  border: none; }
+
+.group-text {
+  color: white; }
+
+.header-text {
+  font-weight: var(--fw-600);
+  font-size: var(--fs-24); }
+
+.sub-text {
+  font-weight: var(--fw-600);
+  font-size: var(--fs-14); }
+
+.btn-explore {
+  width: fit-content;
+  background-color: white;
+  color: var(--clr-orange);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-600); }
+
+.btn-explore:hover {
+  background-color: var(--clr-orange);
+  color: white; }
+
+.background-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.7;
+  border-radius: 5px; }
+
+/*  */
+/* PLACE */
+.place-text {
+  color: white;
+  font-size: var(--fs-20);
+  bottom: 0;
+  left: 15px;
+  font-weight: var(--fw-600); }
+
+/*  */
+/* HOTEL */
+.fs-20 {
+  font-size: var(--fs-20); }
+
+.fw-600 {
+  font-weight: var(--fw-600); }
+
+.part {
+  font-size: var(--fs-20);
+  font-weight: var(--fw-500); }
+
+.btn-outline-orange {
+  border: 1px solid var(--clr-orange);
+  background-color: white;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-400);
+  color: var(--clr-orange); }
+
+.btn-outline-orange:hover {
+  background-color: var(--clr-orange);
+  color: white; }
+
+.gray-500 {
+  color: var(--clr-gray-500); }
+
+/*  */
+/* TOUR GUIDE */
+.tag {
+  width: fit-content;
+  padding: 2px 4px;
+  border-radius: 5px;
+  background-color: #E2DBD8;
+  color: #A29D9B;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-400); }
+
+.list-tour-guide img:nth-child(1) {
+  width: auto;
+  z-index: 1;
+  border-radius: 50%;
+  top: 35%; }
+
+.list-tour-guide img:nth-child(2) {
+  width: auto;
+  z-index: 2;
+  left: 10%;
+  border-radius: 50%;
+  top: 35%; }
+
+.list-tour-guide .more-tour-guide {
+  z-index: 3;
+  left: 28%;
+  top: 40%;
+  background: var(--clr-orange);
+  color: white;
+  border-radius: 5px;
+  padding: 2px 4px;
+  font-size: 14px;
+  font-weight: 400; }
+
+/* .tour-guide div .location::after {
+    content: "";
+    border-right: 1px solid var(--clr-orange);
+    margin: 10px;
+} */
+.fs-24 {
+  font-size: var(--fs-24); }
+
+.fw-500 {
+  font-weight: var(--fw-500); }
+
+/*  */
+/* BLOG */
+.blog-container {
+  border: 1px solid #A0A0A0;
+  border-radius: 5px;
+  padding: 20px; }
+
+.blog-container img {
+  border-radius: 5px;
+  height: 100%; }
+
+.blog-info .title {
+  font-size: var(--fs-16);
+  font-weight: var(--fw-600); }
+
+.blog-info .description {
+  font-size: var(--fs-14);
+  font-weight: var(--fw-400); }
+
+.blog-info a {
+  text-decoration: none;
+  color: var(--clr-orange); }
+
+.blog-info a:hover {
+  text-decoration: none;
+  color: #552308a8; }
+
+.blog-info div {
+  margin-bottom: 5px; }
+
+.btn-fill {
+  background-color: var(--clr-orange);
+  color: white;
+  font-size: var(--fs-16);
+  font-weight: var(--fw-400); }
+
+.btn-fill:hover {
+  background-color: #FF6347;
+  color: white; }
+
+/*  */
+/* Select2 */
+.select2-selection__arrow b {
+  display: none; }
+
+.select2-selection__placeholder, .select2-selection__rendered {
+  color: var(--clr-orange) !important;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-400); }
+
+.select2-selection--single {
+  background-color: #F5F5F5 !important;
+  border: none !important; }
+
+.select2-selection__rendered {
+  border-radius: 5px;
+  height: 35px;
+  padding-top: 4px; }
+
+.select2-container, .select2-selection--single {
+  height: 35px !important; }
+
+/*  */
+/* END CSS HOME PAGE */
+/* CSS PAGE SEARCH HOTEL */
+/* ASIDE */
+.side-bar {
+  border: 1px solid var(--clr-orange);
+  border-radius: 5px;
+  padding: 24px 20px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 10px;
+  left: 0;
+  display: grid;
+  gap: 24px; }
+
+.irs--round .irs-handle {
+  border: 2px solid var(--clr-orange); }
+
+.irs--round .irs-line {
+  background: #F5F5F5;
+  border-radius: 100px; }
+
+.irs--round .irs-bar {
+  border-radius: 100px;
+  background-color: var(--clr-orange); }
+
+.irs-from, .irs-to, .irs-single {
+  display: none; }
+
+.irs--round .irs-min, .irs--round .irs-max {
+  top: 50px;
+  visibility: visible !important; }
+
+/*  */
+/* END CSS PAGE SEARCH HOTEL */

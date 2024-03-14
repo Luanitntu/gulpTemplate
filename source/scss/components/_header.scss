@@ -1,4 +1,270 @@
-h1{
-    color: red;
-    font-size: 20px;
+/* CSS HEADER */
+.top-bar {
+    background-color: var(--clr-white);
+    font-weight: var(--fw-600);
+    font-size: var(--fs-14);
 }
+
+.top-bar__left > a, .top-bar__right > a {
+    text-decoration: none;
+    color: var(--clr-orange);
+}
+
+.top-bar__left > a::after, .top-bar__right > a::after {
+    content: "";
+    border-right: 1px solid var(--clr-orange);
+    margin: 10px;
+}
+
+.top-bar__left > a:last-child:after, .top-bar__right > a:last-child:after {
+    content: "";
+    border-right: none;
+    margin: 0;
+}
+
+.navbar-nav {
+    font-size: var(--fs-20);
+    font-weight: var(--fw-600);
+}
+
+.navbar-nav > .nav-item > .nav-link:hover {
+    color: var(--clr-orange);
+}
+
+.dropdown-item:hover {
+    color: var(--clr-orange);
+    background: none;
+} 
+
+.search {
+    position: relative;
+}
+
+.bg-banner {
+    background: url('../images/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-position: center center;
+    background-attachment: fixed;
+
+    text-align: center;
+    color: white;
+    height: 450px;
+}
+
+.bg-banner > h1 {
+    font-size: var(--fs-60);
+    font-weight: var(--fw-500);
+}
+
+.bg-banner > p {
+    font-size: var(--fs-20);
+    font-weight: var(--fw-400);
+}
+
+.search-group {
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid var(--clr-orange);
+    border-radius: 5px;
+    padding: 24px 20px 24px 20px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.nav-underline .nav-link {
+    color: black;
+    width: 100%;
+}
+
+.nav-underline .nav-link:hover {
+    color: var(--clr-orange) !important
+}
+
+.nav-underline .nav-link.active {
+    color: var(--clr-orange) !important
+}
+
+.nav-underline {
+    gap: 16px;
+}
+
+.nav-link > p {
+    margin-bottom: 0;
+}
+
+.form-select {
+    padding: .375rem .75rem .375rem .75rem;
+}
+
+.input-group > .input-group-text {
+    background-color: #F5F5F5F5;
+    color: var(--clr-orange);
+    border: none
+}
+
+.group-icon {
+    position: absolute;
+    right: 25px;
+    top: 9px;
+    font-size: 15px;
+    color: var(--clr-orange);
+}
+
+#address, #type-room {
+    --bs-form-select-bg-img: none;
+    border: none;
+    color: var(--clr-orange);
+    background-color: #F5F5F5F5;
+}
+
+.input-date, .input-date::placeholder {
+    --bs-form-select-bg-img: none;
+    border: none;
+    color: var(--clr-orange);
+    background-color: #F5F5F5F5;
+    font-size: var(--fs-14);
+    font-weight: var(--fw-400);
+    padding: 7px 12px;
+}
+
+.input-date:hover {
+    cursor: pointer;
+}
+
+.input-date:focus {
+    box-shadow: 0 0 0 0.1rem var(--clr-orange);
+    background-color: rgba(245, 245, 245, 0.96);
+}
+
+.btn-submit {
+    color: white;
+    background-color: var(--clr-orange);
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    font-size: var(--fs-14);
+    font-weight: var(--fw-400);
+    padding: 6px 12px;
+}
+
+.btn-submit:hover {
+    color: white;
+    background-color: #FF6347;
+}
+
+.custom-btn {
+    color: var(--clr-orange);
+    border: none;
+    background-color: #F5F5F5F5;
+    font-size: var(--fs-14);
+    font-weight: var(--fw-400);
+    padding: 7px 12px;
+}
+
+.custom-btn:focus {
+    border: none;
+    box-shadow: none;
+    color: var(--clr-orange);
+    background-color: #F5F5F5F5;
+}
+
+.custom-btn:hover {
+    cursor: pointer;
+}
+
+.fa-user-group.group-icon {
+    right: 10px;
+}
+
+.dropdown-rooms.show {
+    transform: translate3d(0px, 38.1818px, 0px);
+    width: 100%;
+    border: 1px solid var(--clr-orange);
+}
+
+.dropdown-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 14px 4px 24px;
+}
+
+.dropdown-item-row .val {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-item-row .val span {
+    margin-right: 5px;
+}
+
+.dropdown-item-row .val span:last-child {
+    margin-right: 0;
+}
+
+.dropdown-item-row .val .btn-minus, .dropdown-item-row .val .btn-add {
+    color: var(--clr-orange);
+    cursor: pointer;
+}
+
+.dropdown-item-row .val .btn-minus:hover, .dropdown-item-row .val .btn-add:hover {
+    color: #FF6347;
+}
+
+.dropdown-item-row .label {
+    font-size: var(--fs-14);
+    font-weight: var(--fw-400);
+}
+
+.count-display {
+    min-width: 25px;
+    text-align: center;
+}
+
+.count-display input {
+    width: 35px;
+    border-radius: 5px;
+    text-align: center;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.line {
+    position: relative;
+}
+
+.line::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    border-right: 1px solid rgba(108, 117, 124, 0.2);
+    right: 0;
+    top: 0;
+}
+
+.line:last-child::after {
+    content: '';
+    border-right: none;
+} 
+
+.input-search {
+    text-align: left;
+    border: none;
+    background-color: rgba(245, 245, 245, 0.96);
+}
+
+.input-search:focus {
+    box-shadow: 0 0 0 0.1rem var(--clr-orange);
+    background-color: rgba(245, 245, 245, 0.96);
+}
+
+.input-search::placeholder {
+    font-size: var(--fs-14);
+    font-weight: var(--fw-400);
+    color: rgba(217, 217, 217, 1);
+}
+/* END CSS HEADER */

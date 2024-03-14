@@ -1,5 +1,3 @@
-console.log('footer');
-console.log('header');
 $(document).ready(function () {
     initSlickTour()
     initSlickEvent()

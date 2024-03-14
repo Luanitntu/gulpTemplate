@@ -1,0 +1,134 @@
+/* CSS FOOTER */
+.even-columns {
+    display: grid;
+    gap: 1rem;
+}
+  
+@media (min-width: 50em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+
+.footer-title {
+    position: relative;
+    font-size: var(--fs-20);
+    font-weight: var(--fw-600);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.footer-title::before {
+    content: "";
+    position: absolute;
+    width: 136px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.info-company {
+    position: relative;
+    padding-left: 25px;
+}
+
+.info-company::before {
+    content: "";
+    position: absolute;
+    border-left: 3px solid var(--clr-orange);
+    top: 20px;
+    left: 0;
+    height: 85%;
+}
+
+.info-company .name-company {
+    color: var(--clr-orange);
+    font-size: var(--fs-20);
+    font-weight: var(--fw-600);
+}
+
+.info-company .property {
+    color: #1A2B47;
+    font-size: var(--fs-18);
+    font-weight: var(--fw-600);
+}
+
+.info-company .value {
+    color: #989898;
+    font-size: var(--fs-18);
+    font-weight: var(--fw-400);
+}
+
+.general {
+    gap: 10px;
+}
+
+.general .nav-item .nav-link {
+    padding-left: 0;
+    color: #403E3E;
+    font-size: var(--fs-16);
+    font-weight: var(--fw-400);
+    line-height: 24px;
+}
+
+.general .nav-item .nav-link:hover {
+    color: #817d7d;
+}
+
+.payment p {
+    font-size: var(--fs-18);
+    font-weight: var(--fw-500);
+    color: #A6A5A5;
+}
+
+.payment, .social, .gov {
+    position: relative;
+    padding-left: 25px;
+}
+
+.payment::after, .social::after, .gov::after {
+    content: "";
+    position: absolute;
+    border-left: 3px solid var(--clr-orange);
+    top: 0;
+    left: 0;
+    height: 85%;
+}
+
+.payment p, .social p {
+    font-size: var(--fs-18);
+    font-weight: var(--fw-500);
+    color: #403E3E;
+}
+
+.social div {
+    text-align: center;
+}
+
+.social i {
+    color: #1A2B47;
+}
+
+.list-payment {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0.5rem;
+}
+
+.list-payment div {
+    text-align: center;
+    border-radius: 6px;
+    background-color: #FFF6D8;
+    padding: 4px;
+}
+
+.gov {
+    text-align: center;
+}
+
+.copyright p{
+    font-size: var(--fs-20);
+    font-weight: var(--fw-400);
+}
+/* END CSS FOOTER */
