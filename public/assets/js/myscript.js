@@ -20,7 +20,7 @@ $(document).ready(function () {
     let numSlideTours = 5
     let classBtnTours = 'tab'
  
-    initSlick(classTours.replace(classTours, 'nav-tours'), numSlideTours, classBtnTours)
+    initSlick(classTours.split(' ')[1], numSlideTours, classBtnTours)
 
     let classGuide = $('.list-guide').attr('class')
     let numSlideGuide = 3
@@ -35,8 +35,8 @@ $(document).ready(function () {
     let clsLocation = $('.select-location').attr('class')
     let clsLanguage = $('.select-language').attr('class')
 
-    initSelect2(clsLocation, 'Địa điểm')
-    initSelect2(clsLanguage, 'Chọn ngôn ngữ dành cho hướng dẫn viên')
+    initSelect2(clsLocation.split(' ')[1], 'Địa điểm')
+    initSelect2(clsLanguage.split(' ')[1], 'Chọn ngôn ngữ dành cho hướng dẫn viên')
     handleTypeRoom()
 
     let idStartTour = $('#startDateTour').attr('id')

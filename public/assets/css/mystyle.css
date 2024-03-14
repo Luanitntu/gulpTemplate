@@ -131,6 +131,9 @@ meter {
 .navbar-nav > .nav-item > .nav-link:hover {
   color: var(--clr-orange); }
 
+.tab-search .nav-item .nav-link {
+  text-align: center; }
+
 .dropdown-item:hover {
   color: var(--clr-orange);
   background: none; }
