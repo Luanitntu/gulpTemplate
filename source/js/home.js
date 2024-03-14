@@ -1,91 +1,62 @@
 $(document).ready(function () {
-    initSlickTour()
-    initSlickEvent()
-    initSlickNavs()
-    initSlickPlace()
-    initSlickHotel()
-    initSlickGuide()
-    initSelect2Location()
-    initSelect2Language()
+    let classTour = $('.list-tour').attr('class')
+    let numSlideTour = 4
+    let classBtnTour = 'content'
+    initSlick(classTour, numSlideTour, classBtnTour)
+
+    let classEvent = $('.list-event').attr('class')
+    let numSlideEvent = 4
+    let classBtnEvent = 'content'
+    initSlick(classEvent, numSlideEvent, classBtnEvent)
+
+    let classPlace = $('.list-place').attr('class')
+    let numSlidePlace = 6
+    let classBtnPlace = 'place'
+    initSlick(classPlace, numSlidePlace, classBtnPlace)
+
+    let classTours = $('.nav-tours').attr('class')
+    let numSlideTours = 5
+    let classBtnTours = 'tab'
+ 
+    initSlick(classTours.replace(classTours, 'nav-tours'), numSlideTours, classBtnTours)
+
+    let classGuide = $('.list-guide').attr('class')
+    let numSlideGuide = 3
+    let classBtnGuide = 'guide'
+    initSlick(classGuide, numSlideGuide, classBtnGuide)
+
+    let classHotel = $('.list-hotel').attr('class')
+    let numSlideHotel = 4
+    let classBtnHotel = 'hotel'
+    initSlick(classHotel, numSlideHotel, classBtnHotel)
+
+    let clsLocation = $('.select-location').attr('class')
+    let clsLanguage = $('.select-language').attr('class')
+
+    initSelect2(clsLocation, 'Địa điểm')
+    initSelect2(clsLanguage, 'Chọn ngôn ngữ dành cho hướng dẫn viên')
     handleTypeRoom()
 
-    let idStart = $('#startDateTour').attr('id')
-    let idEnd = $('#endDateTour').attr('id')
+    let idStartTour = $('#startDateTour').attr('id')
+    let idEndTour = $('#endDateTour').attr('id')
 
-    initDPR(idStart, idEnd)
-    // initDPR()
+    let idStartService = $('#startDateService').attr('id')
+    let idEndService = $('#endDateService').attr('id')
+
+    initDPR(idStartTour, idEndTour)
+    initDPR(idStartService, idEndService)
+
 });
 
-function initSlickTour() {
-    $(".list-tour").slick({
+function initSlick(nameClass, numSlide, classBtn) {
+    $("."+nameClass).slick({
         infinite: false,
         dots: false,
-        slidesToShow: 4,
+        slidesToShow: numSlide,
         prevArrow:
-            '<button type="button" class="slick-prev slick-content-prev"></button>',
+            '<button type="button" class="slick-prev slick-'+classBtn+'-prev"></button>',
         nextArrow:
-            '<button type="button" class="slick-next slick-content-next"></button>',
-    });
-}
-
-function initSlickEvent() {
-    $(".list-event").slick({
-        infinite: false,
-        dots: false,
-        slidesToShow: 4,
-        prevArrow:
-            '<button type="button" class="slick-prev slick-content-prev"></button>',
-        nextArrow:
-            '<button type="button" class="slick-next slick-content-next"></button>',
-    });
-}
-
-function initSlickNavs() {
-    $(".nav-tours").slick({
-        infinite: false,
-        dots: false,
-        speed: 300,
-        slidesToShow: 5,
-        prevArrow:
-            '<button type="button" class="slick-prev slick-tab-prev"></button>',
-        nextArrow:
-            '<button type="button" class="slick-next slick-tab-next"></button>',
-    });
-}
-
-function initSlickPlace() {
-    $(".list-place").slick({
-        infinite: false,
-        dots: false,
-        slidesToShow: 6,
-        prevArrow:
-            '<button type="button" class="slick-prev slick-place-prev"></button>',
-        nextArrow:
-            '<button type="button" class="slick-next slick-place-next"></button>',
-    });
-}
-
-function initSlickHotel() {
-    $(".list-hotel").slick({
-        infinite: false,
-        dots: false,
-        slidesToShow: 4,
-        prevArrow:
-            '<button type="button" class="slick-prev slick-hotel-prev"></button>',
-        nextArrow:
-            '<button type="button" class="slick-next slick-hotel-next"></button>',
-    });
-}
-
-function initSlickGuide() {
-    $(".list-guide").slick({
-        infinite: false,
-        dots: false,
-        slidesToShow: 3,
-        prevArrow:
-            '<button type="button" class="slick-prev slick-guide-prev"></button>',
-        nextArrow:
-            '<button type="button" class="slick-next slick-guide-next"></button>',
+            '<button type="button" class="slick-next slick-'+classBtn+'-next"></button>',
     });
 }
 
@@ -114,17 +85,9 @@ function matchCustom(params, data) {
     return null;
 }
 
-function initSelect2Location() {
-    $('.select-location').select2({
-        placeholder: "Địa điểm",
-        matcher: matchCustom,
-        width: 'resolve'
-    });
-}
-
-function initSelect2Language() {
-    $('.select-location').select2({
-        placeholder: "Địa điểm",
+function initSelect2(id, placeholder) {
+    $('.'+id).select2({
+        placeholder: placeholder,
         matcher: matchCustom,
         width: 'resolve'
     });
