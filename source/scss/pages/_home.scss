@@ -169,6 +169,7 @@ section:last-child {
   border-radius: 15px;
   border: 1px solid var(--clr-orange);
   color: var(--clr-orange);
+  padding: 10px 8px;
 }
 
 .menu-tab {
@@ -300,6 +301,7 @@ a.slick-slide {
 
 .nav-tours .slick-slide {
   margin: 0;
+  text-align: center;
 }
 
 .slick-tab-prev.slick-prev {

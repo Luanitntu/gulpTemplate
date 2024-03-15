@@ -590,7 +590,8 @@ section:last-child {
 .menu-tab.nav-link.active {
   border-radius: 15px;
   border: 1px solid var(--clr-orange);
-  color: var(--clr-orange); }
+  color: var(--clr-orange);
+  padding: 10px 8px; }
 
 .menu-tab {
   width: 100%;
@@ -699,7 +700,8 @@ a.slick-slide {
     width: fit-content !important;
 } */
 .nav-tours .slick-slide {
-  margin: 0; }
+  margin: 0;
+  text-align: center; }
 
 .slick-tab-prev.slick-prev {
   top: 14px;

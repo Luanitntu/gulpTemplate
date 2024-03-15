@@ -15,7 +15,7 @@ $(document).ready(function () {
     initSlick(classPlace, numSlidePlace, classBtnPlace)
 
     let classTours = $('.nav-tours').attr('class')
-    let numSlideTours = 5
+    let numSlideTours = 6
     let classBtnTours = 'tab'
  
     initSlick(classTours.split(' ')[1], numSlideTours, classBtnTours)
@@ -39,12 +39,15 @@ $(document).ready(function () {
 
     let idStartTour = $('#startDateTour').attr('id')
     let idEndTour = $('#endDateTour').attr('id')
+    initDPR(idStartTour, idEndTour)
 
     let idStartService = $('#startDateService').attr('id')
     let idEndService = $('#endDateService').attr('id')
-
-    initDPR(idStartTour, idEndTour)
     initDPR(idStartService, idEndService)
+
+    let idStartEvent = $('#startDateEvent').attr('id')
+    let idEndEvent = $('#endDateEvent').attr('id')
+    initDPR(idStartEvent, idEndEvent)
 
 });
 
