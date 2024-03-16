@@ -1,7 +1,6 @@
-console.log('footer');
-
 $(document).ready(function () {
-    includeHTML();
+    console.log('ready');
+   includeHTML();
 })
 
 

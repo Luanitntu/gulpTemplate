@@ -1,7 +1,6 @@
-console.log('footer');
-
 $(document).ready(function () {
-    includeHTML();
+    console.log('ready');
+   includeHTML();
 })
 
 
@@ -29,7 +28,8 @@ function includeHTML() {
 }
 
 console.log('header');
-$(document).ready(function () {
+$(window).load(function () {
+    console.log('load')
     let classTour = $('.list-tour').attr('class')
     let numSlideTour = 4
     let classBtnTour = 'content'
@@ -45,7 +45,7 @@ $(document).ready(function () {
     let classBtnPlace = 'place'
     initSlick(classPlace, numSlidePlace, classBtnPlace)
 
-    let classTours = $('.nav-tours').attr('class')
+    let classTours = $('.nav-tours').attr('class') ?? ""
     let numSlideTours = 6
     let classBtnTours = 'tab'
  
@@ -61,8 +61,8 @@ $(document).ready(function () {
     let classBtnHotel = 'hotel'
     initSlick(classHotel, numSlideHotel, classBtnHotel)
 
-    let clsLocation = $('.select-location').attr('class')
-    let clsLanguage = $('.select-language').attr('class')
+    let clsLocation = $('.select-location').attr('class') ?? ""
+    let clsLanguage = $('.select-language').attr('class') ?? ""
 
     initSelect2(clsLocation.split(' ')[1], 'Địa điểm')
     initSelect2(clsLanguage.split(' ')[1], 'Chọn ngôn ngữ dành cho hướng dẫn viên')
@@ -171,7 +171,6 @@ function handleTypeRoom() {
         var rooms = parseInt(parent.find('[name=rooms]').val());
 
         var adultsHtml = parent.find('.render .adults .multi').data('html');
-        console.log(parent, adultsHtml);
         parent.find('.render .adults .multi').html(adultsHtml.replace(':count', adults));
 
         var childrenHtml = parent.find('.render .children .multi').data('html');
@@ -209,10 +208,7 @@ function handleTypeRoom() {
 }
 
 function initDPR(idStartDate, idEndDate) {
-    console.log("idStartDate::", idStartDate)
-    console.log("idEndDate::", idEndDate)
     $('#'+idEndDate).addClass("disable-custom");
-    console.log('#'+idStartDate);
     $('#'+idStartDate).daterangepicker({
         autoUpdateInput: false,
         singleDatePicker: true,
