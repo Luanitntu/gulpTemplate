@@ -46,7 +46,6 @@ img {
   max-width: 100%;
 }
 
-
 * {
   padding: 0px;
   margin: 0px;
@@ -165,11 +164,17 @@ section:last-child {
     width: auto !important;
 } */
 
+.list-guide {
+  .detail {
+    display: grid;
+    gap: 8px;
+  }
+}
+
 .menu-tab.nav-link.active {
-  border-radius: 15px;
+  border-radius: 30px;
   border: 1px solid var(--clr-orange);
   color: var(--clr-orange);
-  padding: 10px 8px;
 }
 
 .menu-tab {
@@ -186,7 +191,18 @@ section:last-child {
 .info {
   position: relative;
   border-radius: 5px;
-  box-shadow: 0px 4px 4px 0px #00000040;
+  img {
+    border-radius: 15px;
+  }
+}
+
+.list-guide {
+  .info {
+    box-shadow: 0px 4px 4px 0px #00000040;
+    img {
+      border-radius: 0;
+    }
+  }
 }
 
 .type {
@@ -217,6 +233,7 @@ section:last-child {
 .title {
   font-weight: var(--fw-600);
   font-size: var(--fs-14);
+  margin-bottom: 0;
 }
 
 .detail {
@@ -434,17 +451,16 @@ a.slick-slide {
   font-weight: var(--fw-500);
 }
 
-.btn-outline-orange {
-  border: 1px solid var(--clr-orange);
-  background-color: white;
-  font-size: var(--fs-14);
-  font-weight: var(--fw-400);
-  color: var(--clr-orange);
-}
+.list-hotel {
+  a {
+    color: var(--clr-orange);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-500);
 
-.btn-outline-orange:hover {
-  background-color: var(--clr-orange);
-  color: white;
+    &:hover {
+      color: #FF6347;
+    }
+  }
 }
 
 .gray-500 {
@@ -455,7 +471,7 @@ a.slick-slide {
 /* TOUR GUIDE */
 .tag {
   width: fit-content;
-  padding: 2px 4px;
+  padding: 4px;
   border-radius: 5px;
   background-color: #e2dbd8;
   color: #a29d9b;
@@ -538,7 +554,7 @@ a.slick-slide {
 }
 
 .blog-info div {
-  margin-bottom: 5px;
+  margin-bottom: 16px;
 }
 
 .btn-fill {
@@ -583,46 +599,3 @@ a.slick-slide {
 }
 /*  */
 /* END CSS HOME PAGE */
-
-/* CSS PAGE SEARCH HOTEL */
-/* ASIDE */
-.side-bar {
-  border: 1px solid var(--clr-orange);
-  border-radius: 5px;
-  padding: 24px 20px;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 10px;
-  left: 0;
-  display: grid;
-  gap: 24px;
-}
-
-.irs--round .irs-handle {
-  border: 2px solid var(--clr-orange);
-}
-
-.irs--round .irs-line {
-  background: #f5f5f5;
-  border-radius: 100px;
-}
-
-.irs--round .irs-bar {
-  border-radius: 100px;
-  background-color: var(--clr-orange);
-}
-
-.irs-from,
-.irs-to,
-.irs-single {
-  display: none;
-}
-
-.irs--round .irs-min,
-.irs--round .irs-max {
-  top: 50px;
-  visibility: visible !important;
-}
-/*  */
-
-/* END CSS PAGE SEARCH HOTEL */
