@@ -1,7 +1,11 @@
+/* ============== COMMONS =================*/ 
 @import "../scss/common/font";
+@import "../scss/common/variables";
 
+/* =============== COMPONENTS ============*/ 
 @import "../scss/components/reset";
 @import "../scss/components/header";
 @import "../scss/components/footer";
 
+/* =============== PAGES ================*/
 @import "../scss/pages/home";

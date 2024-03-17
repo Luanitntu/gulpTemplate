@@ -1,0 +1,49 @@
+@mixin btn-action($bg, $color){
+    background: $bg;
+    color: $color;
+    font-size: $fs-16;
+    font-weight: $fw-600;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/*======= COMPONENT =======*/
+.view-all{
+    text-decoration: none;
+    color: $color-primary;
+    font-size: $fs-16;
+    font-weight: $fw-600;
+}
+
+.title-topic{
+    color: $color-primary;
+    font-size: $fs-20;
+    font-weight: $fw-700;
+}
+
+.title-card{
+    font-weight: $fw-600;
+    font-size: $fs-14;
+    margin-bottom: 0;
+}
+
+.price-card{
+    text-align: right;
+    color: $color-primary;
+    font-size: $fs-14;
+    font-weight: $fw-600;
+}
+
+.description-card{
+    font-weight: $fw-400;
+    font-size: $fs-12;
+}
+
+.qoute{
+    background: $bg-tag;
+    color: $color-black;
+    border-left: 4px solid $color-primary;
+}
